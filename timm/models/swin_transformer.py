@@ -25,6 +25,7 @@ from .helpers import build_model_with_cfg, overlay_external_default_cfg
 from .layers import DropPath, to_2tuple, trunc_normal_
 from .registry import register_model
 from .vision_transformer import checkpoint_filter_fn, Mlp, PatchEmbed, _init_vit_weights
+from ..utils.activation import gelu
 
 _logger = logging.getLogger(__name__)
 
@@ -220,7 +221,7 @@ class SwinTransformerBlock(nn.Module):
 
     def __init__(self, dim, input_resolution, num_heads, window_size=7, shift_size=0,
                  mlp_ratio=4., qkv_bias=True, qk_scale=None, drop=0., attn_drop=0., drop_path=0.,
-                 act_layer=nn.GELU, norm_layer=nn.LayerNorm):
+                 act_layer=gelu, norm_layer=nn.LayerNorm):
         super().__init__()
         self.dim = dim
         self.input_resolution = input_resolution

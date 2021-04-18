@@ -16,6 +16,7 @@ from timm.models.helpers import load_pretrained
 from timm.models.layers import DropPath, trunc_normal_
 from timm.models.vision_transformer import Mlp
 from timm.models.registry import register_model
+from timm.utils.activation import gelu
 
 
 def _cfg(url='', **kwargs):
@@ -77,7 +78,7 @@ class Block(nn.Module):
     """ TNT Block
     """
     def __init__(self, dim, in_dim, num_pixel, num_heads=12, in_num_head=4, mlp_ratio=4.,
-            qkv_bias=False, drop=0., attn_drop=0., drop_path=0., act_layer=nn.GELU, norm_layer=nn.LayerNorm):
+            qkv_bias=False, drop=0., attn_drop=0., drop_path=0., act_layer=gelu, norm_layer=nn.LayerNorm):
         super().__init__()
         # Inner transformer
         self.norm_in = norm_layer(in_dim)

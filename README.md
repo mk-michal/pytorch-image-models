@@ -1,3 +1,7 @@
+This is a fork of Pytorch Image Models that makes some models compatible with old versio of pytorch 1.3.1.
+
+
+
 # PyTorch Image Models
 - [Sponsors](#sponsors)
 - [What's New](#whats-new)
