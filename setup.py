@@ -13,8 +13,8 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 exec(open('timm/version.py').read())
 setup(
     name='timm',
-    version=__version__,
-    description='(Unofficial) PyTorch Image Models',
+    version='1.0.0',
+    description='Fork of Unofficial pytorch models compatible with torch 1.3.1',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/rwightman/pytorch-image-models',
