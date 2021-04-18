@@ -43,6 +43,6 @@ setup(
     keywords='pytorch pretrained models efficientnet mobilenetv3 mnasnet',
     packages=find_packages(exclude=['convert', 'tests', 'results']),
     include_package_data=True,
-    install_requires=['torch >= 1.4', 'torchvision'],
+    install_requires=['torch == 1.3.1', 'torchvision == 0.4.2'],
     python_requires='>=3.6',
 )
